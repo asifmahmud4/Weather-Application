@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'app';
+  selectedCity: string = ''; // Assuming this property holds the selected city
+  searchText : string =''
+  
+
+  constructor() { }
+
+  onCityChanged(city: string) {
+    this.selectedCity = city;
+  }
+  onSearchTextChanged(searchText: string) {
+    this.searchText = searchText;
+  }
 }
